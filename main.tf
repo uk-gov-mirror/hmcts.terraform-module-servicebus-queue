@@ -23,8 +23,8 @@ resource "azurerm_servicebus_queue" "servicebus_queue" {
   default_message_ttl                  = "P10675199DT2H48M5.4775807S"
   dead_lettering_on_message_expiration = true
   auto_delete_on_idle                  = "P10675199DT2H48M5.4775807S"
-  enable_partitioning                  = false
-  enable_express                       = false
+  partitioning_enabled                 = false
+  express_enabled                      = false
 }
 
 resource "azurerm_servicebus_queue_authorization_rule" "send_auth_rule" {
